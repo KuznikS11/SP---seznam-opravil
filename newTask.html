@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>To Do register</title>
+   </head>
+
+   <body>
+	<header>
+		<a href="index.html" class="logo">
+			<img src="images/logo.png" alt="" width="70pt" />
+        </a>
+		
+		<nav>
+			<ul>
+				<li> <a href="login.html" class="login"> Login </a> </li>
+				<li> <a href="register.html" class="register"> Sign up </a> </li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class=signUp>
+		<h2>  Create new task </h2>
+		<form>
+			<p><label>Name: 
+					</br>
+					<input name = "name" type = "text" size = "25">
+				</label>
+			</p>
+			<p><label>Description:
+					</br>
+					<textarea name = "description" rows = "4" cols = "50">Enter description here.</textarea>
+				</label>
+			</p>
+			<p><label>Due date:
+					</br>
+					<input type = "date" pattern="\d{1,2}/\d{1,2}/\d{4}"/>
+				</label>
+			</p>
+			<p><label>Category: 
+					</br>
+					<input name = "category" type = "text" size = "25">
+				</label>
+			</p>
+			<p><label>Priority: 
+					</br>
+					<input type = "number" 
+					  min = "0"
+					  max = "10"
+					  step = "1"
+					  value = "0" />
+				</label>
+			</p>
+			<p>
+				<button type="submit" class="button" name="newTask" >Add new task</button>
+			</p>
+		</form>
+	</div>
+	
+	<footer>
+        <p>&copy; ToDoList</p>
+    </footer>
+	</body>
+</html>
