@@ -4,24 +4,19 @@
    <head>
       <meta charset = "utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="css/newTask.css">
       <title>To Do register</title>
    </head>
 
    <body>
 	<header>
-		<a href="index.html" class="logo">
-			<img src="images/logo.png" alt="" width="70pt" />
-        </a>
-		
-		<nav>
-			<ul>
-				<li> <a href="login.html" class="login"> Login </a> </li>
-				<li> <a href="register.html" class="register"> Sign up </a> </li>
-			</ul>
-		</nav>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
+		<span>To Do List</span>
+		<div class="header-links"><a href="login.html" class="login"> Login </a></div>
+		<div class="header-links"><a href="register.html" class="register"> Sign up </a></div>
 	</header>
 	
-	<div class=signUp>
+	<section>
 		<h2>  Create new task </h2>
 		<form>
 			<p><label>Name: 
@@ -57,7 +52,7 @@
 				<button type="submit" class="button" name="newTask" >Add new task</button>
 			</p>
 		</form>
-	</div>
+	</section>
 	
 	<footer>
         <p>&copy; ToDoList</p>

@@ -1,0 +1,58 @@
+.main{
+	background:pink;
+	max-width:1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.description {
+	float:left;
+	max-width:850px;
+}
+.descriptionP{
+	font-size:20px;
+}
+h3 {
+	font-family: Bradley Hand ITC;
+	font-size:30px;
+	color:#FF0099;
+}
+.example{
+	display: block;
+    margin: auto;
+    width: 30%;
+}
+.signInUp {
+	float:left;
+	margin-left:50px;
+}
+h2{
+	font-family: Batang;
+	font-size:25px;
+	color:#AA00AA;
+}
+section p label, section p input{
+	font-size:20px;
+}
+button{
+	font-size: 17px;
+}
+.account{
+	font-size: 22px;
+	color: #660066;
+	font-family: Bradley Hand ITC;
+	font-weight: bold;
+}	
+footer {
+	clear:both;
+	margin-top:50px;
+}
+.header-links{
+	float:right;
+	clear:right;
+}
+span{
+	font-family: Bradley Hand ITC;
+	font-weight: bold;
+	font-size: 50px;
+	color:#CC3399;
+}
