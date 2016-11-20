@@ -1,0 +1,47 @@
+footer {
+	clear:both;
+	margin-top:50px;
+}
+.header-links{
+	float:right;
+	clear:right;
+}
+.header-links a{
+	text-decoration: none;
+}
+.headerName{
+	font-family: Bradley Hand ITC;
+	font-weight: bold;
+	font-size: 50px;
+	color:#CC3399;
+}
+.main {
+	flex-flow:row;
+	display:flex;
+}
+.tasks ul li{
+	display:block;
+	background:yellow;
+	font-size:15px;
+	text-align: center;
+	padding: 1em;
+}
+.tasks ul li:hover + div{
+	display:block;
+	background:pink;
+	font-size:15px;
+	padding:1em;
+}
+.tasks ul div{
+	display: none;
+}
+.sortBy nav li{
+	display:block;
+	font-size:15px;
+	text-align: center;
+	padding: 1em;
+}
+.sortBy nav li:hover{
+	background:red;
+}
+	

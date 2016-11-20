@@ -1,0 +1,90 @@
+footer {
+	clear:both;
+	margin-top:50px;
+}
+.header-links{
+	float:right;
+	clear:right;
+}
+.header-links a{
+	text-decoration: none;
+}
+.headerName{
+	font-family: Bradley Hand ITC;
+	font-weight: bold;
+	font-size: 50px;
+	color:#CC3399;
+}
+.main {
+	flex-flow:row;
+	display:flex;
+}
+
+ul {
+	list-style:None;
+}
+section{
+	padding-left: 50px;
+}
+.profil nav {
+	list-style: None;
+	max-width:100px;
+
+}
+.profil nav li{
+	display:block;
+	background:pink;
+	font-size:15px;
+	text-align: center;
+	padding: 1em;
+}
+.profil nav li:hover{
+	background:red;
+}
+.profil nav li a{
+	text-decoration: none;
+	color: purple;
+}
+.hello{
+	font-family: Bradley Hand ITC;
+	font-size:30px;
+	font-weight:bold;
+	color:purple;
+}
+.stat{
+	font-size:15px;
+	color:red;
+}
+.number{
+	font-weight:bold;
+}
+.importantTasks p {
+	display:block;
+	background:pink;
+	border-radius: 8px;
+	font-size:15px;
+	padding:1em;
+}
+.importantTasks p span{
+	font-size: 17px;
+	color: #AA00AA;
+}
+.tasks ul li{
+	font-size:20px;
+	color:purple;
+}
+input[type="checkbox"]{
+	size:10px;
+}
+button{
+	border-radius: 4px;
+	background-color: purple;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 10px 50px;
+}
+	

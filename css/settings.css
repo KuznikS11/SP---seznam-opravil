@@ -1,0 +1,47 @@
+footer {
+	clear:both;
+	margin-top:50px;
+}
+.header-links{
+	float:right;
+	clear:right;
+}
+.header-links a{
+	text-decoration: none;
+}
+.headerName{
+	font-family: Bradley Hand ITC;
+	font-weight: bold;
+	font-size: 50px;
+	color:#CC3399;
+}
+.main {
+	flex-flow:column;
+	display:flex;
+}
+form{
+	width:220px;
+	display:flex;
+	flex-flow:column;
+	font-size:18px;
+}
+
+form input{
+	font-size:18px;
+}
+button{
+	border-radius: 4px;
+	background-color: purple;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+	max-width: 150px;
+    font-size: 15px;
+    margin: 10px 5px;
+}
+h2{
+	font-family: Batang;
+	font-size:20px;
+	color:#AA00AA;
+}

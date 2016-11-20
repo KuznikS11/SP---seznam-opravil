@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="css/profil.css">
+      <title>ToDo-profil</title>
+   </head>
+
+   <body>
+	<header>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
+		<span class="headerName">To Do List</span>
+		<div class="header-links"><a href="login.html" class="login"> Log Out </a></div>
+	</header>
+	<div class="main">
+		<section class="profil">
+			<p class="hello"> Hi, user! </p>
+			<p class="stat"> You have <span class="number">12 unfinished</span> tasks
+			<br> and <span class="number">30 finished<span> tasks </p>
+			<nav>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="statistics.html">Statistics</a></li>
+				<li><a href="allTasks.html">All tasks</a></li>
+			</nav>	
+		</section>
+		<section class="importantTasks">
+			<p class="important"><span>Name:</span> Homework, SP
+				<br><span>Description:</span>finish the first phase of the project (HTML, CSS javascript)
+				<br><span>Due date:</span>27.11.2016
+				<br><span>Category:</span>School, homeworks
+				<br><span>Priority:</span>6
+			</p>
+			<p class="important"><span>Name:</span>Bithday gift
+				<br><span>Description:</span>Buy birthday gift for Ana
+				<br><span>Due date:</span>25.11.2016
+				<br><span>Category:</span>Errands
+				<br><span>Priority:</span>7
+			</p>
+		</section>
+		<section class="tasks">
+			<ul>
+				<li>Homework, SU<input type="checkbox"/></li>
+				<li>Buy some food<input type="checkbox"/></li>
+				<li>Homework, BI<input type="checkbox"/></li>
+				<li>Birthday gift<input type="checkbox"/></li>
+				<li>Lunch<input type="checkbox"/></li>
+				<li>Wash clothes<input type="checkbox"/></li>
+				<li>Homework, SP<input type="checkbox"/></li>
+				<li>Dentist<input type="checkbox"/></li>
+			</ul>
+			<form action="allTasks.html">
+				<button type="submit" class="button" name="tasks" >See all tasks</button>
+			</form>
+		</section>
+	</div>
+	<footer>
+        <p>&copy; ToDoList</p>
+    </footer>
+	</body>
+</html>
