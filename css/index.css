@@ -1,18 +1,19 @@
 .main {
-	background-color: pink;
-	flex-flow:row;
+	flex-flow:column;
 	display:flex;
+	background:#e6e6e6;
+	padding-right: 30px;
 }
 .description {
-	max-width:850px;
+	margin: 30px;
 }
 .descriptionP{
 	font-size:20px;
 }
 h3 {
-	font-family: Bradley Hand ITC;
+	font-family: "Bradley Hand ITC";
 	font-size:30px;
-	color:#FF0099;
+	color:#4d94ff;
 }
 .example{
 	display: block;
@@ -20,12 +21,18 @@ h3 {
     width: 30%;
 }
 .signInUp {
-	margin-left:50px;
+	margin:30px auto;
+	display:block;
+	background: #99c2ff;
+	border-radius: 4px;
+	padding: 8px;
+	min-width : 300px;
+	
 }
 h2{
-	font-family: Batang;
+	font-family: Verdana;
 	font-size:25px;
-	color:#AA00AA;
+	color:#0052cc;
 }
 form{
 	width:220px;
@@ -33,38 +40,83 @@ form{
 	flex-flow:column;
 	font-size:20px;
 }
-
 form input{
-	font-size:20px;
+	font-size:17px;
+	padding: 3px;
 }
-button{
+ button{
 	border-radius: 4px;
-	background-color: purple;
+	background-color: #0066ff;
     border: none;
     color: white;
     padding: 8px;
     text-align: center;
-    display: inline-block;
     font-size: 20px;
-    margin: 10px 50px;
+    margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+}
+button:hover{
+	color:#c6c6ec;
 }
 .account{
 	font-size: 22px;
-	color: #660066;
-	font-family: Bradley Hand ITC;
+	font-family: "Bradley Hand ITC";
+	color: #0047b3;
 	font-weight: bold;
+	margin-bottom: 0px;
 }	
 footer {
-	clear:both;
-	margin-top:50px;
+	background:#0047b3;
+	border-top: 3px solid #99c2ff;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
 }
-.header-links{
+footer a {
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+	padding-top: 10px;
+}
+footer a:hover {
+	color: #c6c6ec;
+}
+footer p {
+	color: white;
+	font-size:15px;
+	font-family: Verdana;
+}
+header{
+	background: #0047b3;
+	border-bottom: 3px solid #99c2ff;
+}
+.header-links {
 	float:right;
-	clear:right;
+	clear: right;
+	padding-right: 10px;
+	padding-top: 10px;
 }
-span{
-	font-family: Bradley Hand ITC;
+.header-links  a{
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+}
+.header-links a:hover{
+	color:#c6c6ec;
+}
+.header-name{
+	font-family: "Bradley Hand ITC";
 	font-weight: bold;
-	font-size: 50px;
-	color:#CC3399;
+	font-size: 60px;
+	color:white;
+}
+@media screen
+  and (min-width: 1024px) {
+
+	.main {
+		flex-flow:row;
+	}
 }

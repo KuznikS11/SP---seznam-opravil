@@ -1,30 +1,84 @@
 footer {
-	clear:both;
-	margin-top:50px;
+	background:#0047b3;
+	border-top: 3px solid #99c2ff;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
 }
-.header-links{
+footer a {
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+	padding-top: 10px;
+}
+footer a:hover {
+	color: #c6c6ec;
+}
+footer p {
+	color: white;
+	font-size:15px;
+	font-family: Verdana;
+}
+header{
+	background: #0047b3;
+	border-bottom: 3px solid #99c2ff;
+}
+.header-links {
 	float:right;
 	clear:right;
+	padding-right: 10px;
+	padding-top: 10px;
 }
-span{
-	font-family: Bradley Hand ITC;
+.header-links  a{
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+}
+.header-links a:hover{
+	color:#c6c6ec;
+}
+.header-name{
+	font-family: "Bradley Hand ITC";
 	font-weight: bold;
-	font-size: 50px;
-	color:#CC3399;
+	font-size: 60px;
+	color:white;
 }
 section{
-	max-width:1200px;
-	margin-left:auto;
-	margin-right:auto;
+	background:#e6e6e6;
+	padding: 10px 50px;
 }
 h2{
-	font-family: Batang;
+	font-family: Verdana;
 	font-size:25px;
-	color:#AA00AA;
+	color:#0052cc;
 }
-section p label, section p input{
+form input{
 	font-size:17px;
+	padding: 3px;
+}
+form{
+	width:220px;
+	display:flex;
+	flex-flow:column;
+	font-size: 16px;
+	color:#1f1f7a;
+	font-family: Verdana;
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 button{
-	font-size: 17px;
+	border-radius: 4px;
+	background-color: #0066ff;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+	font-family: Verdana;
+	margin-top: 10px;
+	}
+button:hover{
+	color:#c6c6ec;
 }

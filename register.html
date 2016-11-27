@@ -5,47 +5,34 @@
       <meta charset = "utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 	  <link rel="stylesheet" href="css/register.css">
+	  <script type="text/javascript" src="js/registration.js"></script>
       <title>To Do register</title>
    </head>
 
    <body>
 	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
-		<span>To Do List</span>
-		<div class="header-links"><a href="login.html" class="login"> Login </a></div>
-		<div class="header-links"><a href="register.html" class="register"> Sign up </a></div>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="login.html" > Login </a></div>
+		<div class="header-links"><a href="register.html" > Sign up </a></div>
 	</header>
 	
-	<section>
+	<section class="main">
+		<div class="register">
 		<h2>  Register </h2>
-		<form>
-			<p><label>E-mail: 
-					</br>
-					<input name = "email" type = "email" size = "25">
-				</label>
-			</p>
-			<p><label>Username: 
-					</br>
-					<input name = "name" type = "text" size = "25">
-				</label>
-			</p>
-			<p><label>Password: 
-					</br>
-					<input name = "password" type = "password" size = "25">
-				</label>
-			</p>
-			<p><label>Confirm Password: 
-					</br>
-					<input name = "password_con" type = "password" size = "25">
-				</label>
-			</p>
-			<p>
-				<button type="submit" class="button" name="register" >Sign Up</button>
-			</p>
+		<form method="GET" action="profil.html" id="formRegister">
+			<label>E-mail:<input name = "email" type = "email" size = "25" id="email"></label>
+			<label>Username:<input name = "username" type = "text" size = "25" id="username"></label>
+			<label>Password:<input name = "password" type = "password" size = "25" id="password1"></label>
+			<label>Confirm Password: <input name = "password_con" type = "password" size = "25" id="password2"></label>
+			<button type="submit" name="register" id="register">Sign Up</button>
 		</form>
+		</div>
 	</section>
 	
 	<footer>
+		<a href="legal.html">Legal disclaimer</a>
+		<a href="mailto:sk9061@student.uni-lj.si">Contact author</a>
         <p>&copy; ToDoList</p>
     </footer>
 	</body>

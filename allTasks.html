@@ -10,39 +10,58 @@
 
    <body>
 	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
-		<span class="headerName">To Do List</span>
-		<div class="header-links"><a href="login.html" class="login"> Log Out </a></div>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="profil.html"> Sara </a></div>
+		<div class="header-links"><a href="index.html"> Log Out </a></div>
 	</header>
 	<div class="main">
 		<section class="sortBy">
+			<p>Which tasks:</p>
+			<select>
+				<option>Unfinished</option>
+				<option>Finished</option>
+			</select>
 			<p>Sort by:</p>
-			<nav>
-				<li>Date</li>
-				<li>Category</li>
-				<li>Priority</li>
-			</nav>
+			<select>
+				<option>Date</option>
+				<option>Category</option>
+				<option>Priority</option>
+			</select>
 		</section>
-		<section class="tasks">
-			<ul>
-				<li><span>Name:</span> Homework, SP</li>
+		<section class="allTasks">
+			<div class="task">
+				<p class="name">Homework, SP <input type="checkbox"/><button name="edit" onclick="location.href='editTask.html';">Edit</button></p>
 				<div>
 					<p><span>Description:</span>finish the first phase of the project (HTML, CSS javascript)
 					<br><span>Due date:</span>27.11.2016
 					<br><span>Category:</span>School, homeworks
-					<br><span>Priority:</span>6</p>
+					<br><span>Priority:</span>9</p>
 				</div>
-				<li><span>Name:</span> Birthday gift</p></li>
+			</div>
+			<div class="task">
+				<p class="name">Dentist<input type="checkbox"/><button name="edit" onclick="location.href='editTask.html';">Edit</button></p>
+				<div>
+					<p><span>Description:</span>Go to dentist
+					<br><span>Due date:</span>26.11.2016
+					<br><span>Category:</span>Errands
+					<br><span>Priority:</span>8</p>
+				</div>
+			</div>
+			<div class="task">
+				<p class="name">Birthday gift<input type="checkbox"/><button name="edit" onclick="location.href='editTask.html';">Edit</button></p>
 				<div>
 					<p><span>Description:</span>Buy birthday gift for Ana
-					<br><span>Due date:</span>25.11.2016
+					<br><span>Due date:</span>26.11.2016
 					<br><span>Category:</span>Errands
 					<br><span>Priority:</span>7</p>
 				</div>
-			</ul>
+			</div>
 		</section>	
 	</div>
 	<footer>
+		<a href="legal.html">Pravna obvestila</a>
+		<a href="authors.html">O avtorjih</a>
         <p>&copy; ToDoList</p>
     </footer>
 	</body>

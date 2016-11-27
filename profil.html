@@ -10,52 +10,69 @@
 
    <body>
 	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
-		<span class="headerName">To Do List</span>
-		<div class="header-links"><a href="login.html" class="login"> Log Out </a></div>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="profil.html" > Sara </a></div>
+		<div class="header-links"><a href="index.html" > Log Out </a></div>
 	</header>
 	<div class="main">
 		<section class="profil">
-			<p class="hello"> Hi, user! </p>
+			<h2> Hi, Sara! </h2>
 			<p class="stat"> You have <span class="number">12 unfinished</span> tasks
-			<br> and <span class="number">30 finished<span> tasks </p>
+			<br> and <span class="number">30 finished</span> tasks </p>
 			<nav>
-				<li><a href="settings.html">Settings</a></li>
-				<li><a href="statistics.html">Statistics</a></li>
-				<li><a href="allTasks.html">All tasks</a></li>
+				<ul>
+					<li><a href="statistics.html">Statistics</a></li>
+					<li><a href="settings.html">Settings</a></li>
+					<li><a href="allTasks.html">All tasks</a></li>
+					<li><a href="newTask.html">Add task</a></li>
+				</ul>
 			</nav>	
 		</section>
 		<section class="importantTasks">
+			<h3> You should do this tasks today </h3>
 			<p class="important"><span>Name:</span> Homework, SP
-				<br><span>Description:</span>finish the first phase of the project (HTML, CSS javascript)
-				<br><span>Due date:</span>27.11.2016
-				<br><span>Category:</span>School, homeworks
-				<br><span>Priority:</span>6
+				<br><span>Description:</span> finish the first phase of the project (HTML, CSS javascript)
+				<br><span>Due date:</span> 27.11.2016
+				<br><span>Category:</span> School, homeworks
+				<br><span>Priority:</span> 6
 			</p>
-			<p class="important"><span>Name:</span>Bithday gift
-				<br><span>Description:</span>Buy birthday gift for Ana
-				<br><span>Due date:</span>25.11.2016
-				<br><span>Category:</span>Errands
-				<br><span>Priority:</span>7
+			<p class="important"><span>Name:</span> Bithday gift
+				<br><span>Description:</span> Buy birthday gift for Ana
+				<br><span>Due date:</span> 25.11.2016
+				<br><span>Category:</span> Errands
+				<br><span>Priority:</span> 7
+			</p>
+			<p class="important"><span>Name:</span> Bithday gift
+				<br><span>Description:</span> Buy birthday gift for Ana
+				<br><span>Due date:</span> 25.11.2016
+				<br><span>Category:</span> Errands
+				<br><span>Priority:</span> 7
 			</p>
 		</section>
 		<section class="tasks">
-			<ul>
-				<li>Homework, SU<input type="checkbox"/></li>
-				<li>Buy some food<input type="checkbox"/></li>
-				<li>Homework, BI<input type="checkbox"/></li>
-				<li>Birthday gift<input type="checkbox"/></li>
-				<li>Lunch<input type="checkbox"/></li>
-				<li>Wash clothes<input type="checkbox"/></li>
-				<li>Homework, SP<input type="checkbox"/></li>
-				<li>Dentist<input type="checkbox"/></li>
-			</ul>
-			<form action="allTasks.html">
-				<button type="submit" class="button" name="tasks" >See all tasks</button>
-			</form>
+			<h3> Your tasks: </h3>
+			<input type="checkbox"/><p class ="taskCB">Homework, SU</p> 
+			<input type="checkbox"/> <p class ="taskCB">Buy some food</p>
+			<input type="checkbox"/> <p class ="taskCB">Homework, BI</p>
+			<input type="checkbox"/> <p class ="taskCB">Birthday gift</p>
+			<input type="checkbox"/> <p class ="taskCB">Lunch</p>
+			<input type="checkbox"/> <p class ="taskCB">Wash clothes</p>
+			<input type="checkbox"/> <p class ="taskCB">Homework, SP</p>
+			<input type="checkbox"/> <p class ="taskCB">Dentist</p>
+			<div class="buttons">
+				<form action="allTasks.html">
+					<button type="submit" name="tasks" >See all tasks</button>
+				</form>
+				<form action="newTask.html">
+					<button type="submit" name="newTask">Add new task</button>
+				</form>
+			</div>
 		</section>
 	</div>
 	<footer>
+		<a href="legal.html">Pravna obvestila</a>
+		<a href="authors.html">O avtorjih</a>
         <p>&copy; ToDoList</p>
     </footer>
 	</body>

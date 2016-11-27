@@ -5,15 +5,16 @@
       <meta charset = "utf-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
 	  <link rel="stylesheet" href="css/index.css">
+	  <script type="text/javascript" src="js/validation.js"></script>
       <title>To Do index</title>
    </head>
 
    <body>
 	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="70pt"/></a>
-		<span>To Do List</span>
-		<div class="header-links"><a href="login.html" class="login"> Login </a></div>
-		<div class="header-links"><a href="register.html" class="register"> Sign up </a></div>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="login.html"> Login </a></div>
+		<div class="header-links"><a href="register.html"> Sign up </a></div>
 	</header>
 	<div class="main">
 		<section class="description">
@@ -29,25 +30,27 @@
 				do and displays your activity which will motivate you to be less 
 				lazy and do more.
 			</p>
-			<img class = "example" src="images/example.jpg"/>
+			<img class = "example" alt= "example" src="images/example.jpg"/>
 		</section>		
 		<section class="signInUp">
 			<h2>  Sign In </h2>
-			<form>
-				<label>Username:<input name = "name" type = "text" size = "25"></label>
-				<label>Password:<input name = "password" type = "password" size = "25"></label>
-				<button type="submit" class="button" name="login" >Sign In</button>
+			<form method="GET" action="profil.html" id="signIn">
+				<label>Username:<input name = "username" type = "text" size = "25" id="username"></label>
+				<label>Password:<input name = "password" type = "password" size = "25" id="password"></label>
+				<button type="submit"  name="login" id="signInBtn">Sign In</button>
 			</form>
 			
 			<hr>
 			
 			<p class="account"> Don't have an account yet? </p>
-			<form action="register.html">
-				<button type="submit" class="button" name="register" >Sign Up</button>
+			<form method="GET" action="register.html">
+				<button type="submit" name="register" >Sign Up</button>
 			</form>
 		</section>
 	</div>
 	<footer>
+		<a href="legal.html">Legal disclaimer</a>
+		<a href="mailto:sk9061@student.uni-lj.si">Contact author</a>
         <p>&copy; ToDoList</p>
     </footer>
 	</body>
