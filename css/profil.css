@@ -46,10 +46,17 @@ header{
 	color:white;
 }
 .main {
-	flex-flow:row;
+	flex-flow:column;
 	display:flex;
 	background:#e6e6e6;
 	min-height:470px;
+}
+@media screen
+  and (min-width: 650px) {
+
+	.main {
+		flex-flow:row;
+	}
 }
 
 h3 {
