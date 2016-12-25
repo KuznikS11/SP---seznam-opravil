@@ -1,0 +1,88 @@
+footer {
+	background:#0047b3;
+	border-top: 3px solid #99c2ff;
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+}
+footer a {
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+	padding-top: 10px;
+}
+footer a:hover {
+	color: #c6c6ec;
+}
+footer p {
+	color: white;
+	font-size:15px;
+	font-family: Verdana;
+}
+header{
+	background: #0047b3;
+	border-bottom: 3px solid #99c2ff;
+}
+.header-links {
+	float:right;
+	clear:right;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+.header-links  a{
+	text-decoration:none;
+	color: white;
+	font-size:17px;
+	font-family: Verdana;
+}
+.header-links a:hover{
+	color:#c6c6ec;
+}
+.header-name{
+	font-family: "Bradley Hand ITC";
+	font-weight: bold;
+	font-size: 60px;
+	color:white;
+}
+.main {
+	background:#e6e6e6;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.signIn {
+	display:block;
+	background: #99c2ff;
+	border-radius: 4px;
+	padding: 8px;
+	width : 300px;
+	margin:0 auto;
+}
+h2{
+	font-family: Verdana;
+	text-align: center;
+	font-size:25px;
+	color:#0052cc;
+}
+form{
+	display:flex;
+	flex-flow:column;
+	font-size:20px;
+}
+form input{
+	font-size:17px;
+	padding: 3px;
+}
+button{
+	border-radius: 4px;
+	background-color: #0066ff;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 70px;
+}
+button:hover{
+	color:#c6c6ec;
+}

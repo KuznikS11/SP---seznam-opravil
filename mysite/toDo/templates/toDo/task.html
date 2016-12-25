@@ -1,0 +1,10 @@
+
+<div class="task">
+	<p class="name"> {{task.name}} <input type="checkbox"/><a name="edit" href="{% url 'editTask' task.id %}">Edit</a></p>
+	<div>
+		<p><span>Description:</span> {{task.description}}
+		<br><span>Due date:</span> {{task.due_date}}
+		<br><span>Category:</span> {{ task.category}}
+		<br><span>Priority:</span> {{task.priority}} </p>
+	</div>
+</div>

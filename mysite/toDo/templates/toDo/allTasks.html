@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="{% static 'toDo/allTasks.css' %}">
+      <title>ToDo-allTaks</title>
+   </head>
+
+   <body>
+	<header>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="profil.html"> Sara </a></div>
+		<div class="header-links"><a href="index.html"> Log Out </a></div>
+	</header>
+	<div class="main">
+		<section class="sortBy">
+			<p>Which tasks:</p>
+			<select>
+				<option>Unfinished</option>
+				<option>Finished</option>
+			</select>
+			<p>Sort by:</p>
+			<select>
+				<option>Date</option>
+				<option>Category</option>
+				<option>Priority</option>
+			</select>
+		</section>
+		<section class="allTasks">
+
+			{% for task in tasks %}
+				{% include 'toDo/task.html' %}
+			{% endfor %}
+			
+		</section>	
+	</div>
+	<footer>
+		<a href="legal.html">Pravna obvestila</a>
+		<a href="authors.html">O avtorjih</a>
+        <p>&copy; ToDoList</p>
+    </footer>
+	</body>
+</html>

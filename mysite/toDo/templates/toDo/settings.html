@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="css/newTask.css">
+	  <script type="text/javascript" src="js/settings.js"></script>
+      <title>ToDo-settings</title>
+   </head>
+
+   <body>
+	<header>
+		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		<div class="header-links"><a href="profil.html" > Sara </a></div>
+		<div class="header-links"><a href="index.html" > Log Out </a></div>
+	</header>
+	<section class="main">
+		<h2>Change password</h2>
+			<form method="POST" class="formLeft" id="changePass">
+				<label>Old password:<input name = "oldPassword" type = "password" size = "25" id ="oldPassword"></label>
+				<label>New password:<input name = "password1" type = "password" size = "25" id ="password1"></label>
+				<label>Confirm new password:<input name = "password2" type = "password" size = "25" id="password2"></label>
+				<button type="submit" class="button" name="login" >Change password</button>
+			</form>
+		<h2> Delet account</h2>
+			<form method="GET" action="index.html">
+				<button type="submit"  id="btnDelete">Delete account</button>
+			</form>
+	</section>
+	<footer>
+		<a href="legal.html">Legal disclaimer</a>
+		<a href="mailto:sk9061@student.uni-lj.si">Contact author</a>
+        <p>&copy; ToDoList</p>
+    </footer>
+	</body>
+</html>
