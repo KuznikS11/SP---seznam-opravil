@@ -38,7 +38,7 @@
 			<form method="POST" action="{% url 'profil' username %}" id="signIn">
 				{% csrf_token %}
 				{{ login_form }}
-				<button type="submit"  name="login" id="signInBtn">Sign In</button>
+				<input class="button" type="submit"  name="login" id="signInBtn">Sign In</input>
 			</form>
 			
 			<hr>
