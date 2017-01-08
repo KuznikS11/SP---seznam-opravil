@@ -90,7 +90,7 @@ header{
 .task div{
 	display: none;
 }
-.name button{
+.edit{
 	float:right;
 	border-radius: 4px;
 	background-color: white;
@@ -102,8 +102,9 @@ header{
     font-size: 13px;
 	font-weight: bold;
 	margin-left: 50px;
+	text-decoration: none;
 }
-.name button:hover{
+.edit:hover{
 	color: #0066ff;
 }
 .name input{

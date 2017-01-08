@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
    <head>
       <meta charset = "utf-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <link rel="stylesheet" href="css/profil.css">
+	  <link rel="stylesheet" href="{% static 'toDo/profil.css' %}">
       <title>ToDo-profil</title>
    </head>
 
@@ -20,8 +21,8 @@
 	<div class="main">
 		<section class="profil">
 			<h2> Hi, Sara! </h2>
-			<p class="stat"> You have <span class="number">12 unfinished</span> tasks
-			<br> and <span class="number">30 finished</span> tasks </p>
+			<p class="stat"> You have <span class="number"> {{n_unfinished}} unfinished</span> tasks
+			<br> and <span class="number">{{n_finished}} finished</span> tasks </p>
 			<nav>
 				<ul>
 					<li><a href="statistics.html">Statistics</a></li>
@@ -33,35 +34,20 @@
 		</section>
 		<section class="importantTasks">
 			<h3> You should do this tasks today </h3>
-			<p class="important"><span>Name:</span> Homework, SP
-				<br><span>Description:</span> finish the first phase of the project (HTML, CSS javascript)
-				<br><span>Due date:</span> 27.11.2016
-				<br><span>Category:</span> School, homeworks
-				<br><span>Priority:</span> 6
+			{% for task in important_tasks %}
+			<p class="important"><span>Name:</span> {{task.name}}
+				<br><span>Description:</span> {{ task.description }}
+				<br><span>Due date:</span> {{ task.due_date}}
+				<br><span>Category:</span> {{task.category}}
+				<br><span>Priority:</span>  {{task.priority}}
 			</p>
-			<p class="important"><span>Name:</span> Bithday gift
-				<br><span>Description:</span> Buy birthday gift for Ana
-				<br><span>Due date:</span> 25.11.2016
-				<br><span>Category:</span> Errands
-				<br><span>Priority:</span> 7
-			</p>
-			<p class="important"><span>Name:</span> Bithday gift
-				<br><span>Description:</span> Buy birthday gift for Ana
-				<br><span>Due date:</span> 25.11.2016
-				<br><span>Category:</span> Errands
-				<br><span>Priority:</span> 7
-			</p>
+			{% endfor %}
 		</section>
 		<section class="tasks">
 			<h3> Your tasks: </h3>
-			<input type="checkbox"/><p class ="taskCB">Homework, SU</p> 
-			<input type="checkbox"/> <p class ="taskCB">Buy some food</p>
-			<input type="checkbox"/> <p class ="taskCB">Homework, BI</p>
-			<input type="checkbox"/> <p class ="taskCB">Birthday gift</p>
-			<input type="checkbox"/> <p class ="taskCB">Lunch</p>
-			<input type="checkbox"/> <p class ="taskCB">Wash clothes</p>
-			<input type="checkbox"/> <p class ="taskCB">Homework, SP</p>
-			<input type="checkbox"/> <p class ="taskCB">Dentist</p>
+			{% for task in all_tasks %}
+				<input type="checkbox"/><p class ="taskCB"> {{task.name }}</p> 
+			{% endfor %}
 			<div class="buttons">
 				<form action="allTasks.html">
 					<button type="submit" name="tasks" >See all tasks</button>

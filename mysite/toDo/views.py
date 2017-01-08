@@ -5,7 +5,7 @@ from django.urls import reverse
 
 from django.contrib.auth import authenticate, login, logout
 
-from .forms import LoginForm, EditTaskForm
+from .forms import LoginForm, EditTaskForm, ChooseTasksForm
 from .models import Task
 
 from django.contrib.auth.decorators import login_required
@@ -49,16 +49,59 @@ def login(request):
 def register(request):
     return render(request,'toDo/register.html')
 
-@login_required
+
 def profil(request, user_id):
-    return render(request,'toDo/profil.html', {'user_id' : user_id})
+    context = {}
+    context['user_id'] = user_id
 
-@login_required
+    context['n_finished'] = len(Task.objects.filter(finished = True))
+    context['n_unfinished'] = len(Task.objects.filter(finished = False))
+    
+    all_tasks = Task.objects.filter(id_user=user_id)
+    if len(all_tasks) > 9:
+        all_tasks = all_tasks[:9]
+    context['all_tasks'] = all_tasks
+
+    if len(all_tasks) <=3:
+        important_tasks = all_tasks
+    else:
+        important_tasks = all_tasks.order_by('due_date')[:3]
+    context['important_tasks'] = important_tasks
+    return render(request,'toDo/profil.html', context)
+
+
 def allTasks(request, user_id):
-    t = Task.objects.filter(id_user=user_id)
-    return render(request,'toDo/allTasks.html', {'tasks' : t})
+    context = {}
+    if request.GET:
+        form = ChooseTasksForm(data=request.GET)
+        print(form.is_valid(), form.errors)
+        if form.is_valid():
+            old_new_f = form.cleaned_data['old_new']
+            sort_f = form.cleaned_data['sort']
+            if old_new_f == '1':
+                t = Task.objects.filter(id_user=user_id, finished=False)
+            else:
+                t = Task.objects.filter(id_user=user_id, finished=True)
 
-@login_required
+            if sort_f == '1':
+                t = t.order_by('due_date')
+
+            if sort_f == '2':
+                t = t.order_by('category')
+
+            if sort_f == '3':
+                t = t.order_by('-priority')
+
+            
+
+            context['tasks'] = t
+
+    context['choose_tasks_form'] = ChooseTasksForm()
+
+        
+    return render(request,'toDo/allTasks.html', context)
+
+
 def editTask(request, task_id):
     context = {}
     t = Task.objects.get(pk=task_id)
@@ -66,9 +109,10 @@ def editTask(request, task_id):
 
     etForm = EditTaskForm(instance=t)
     if request.method == "POST":
-        etForm = EditTaskForm(request.POST, instance=a)
+        etForm = EditTaskForm(request.POST, instance=t)
         if etForm.is_valid():
             etForm.save()
+            return HttpResponseRedirect(reverse('index'))
 
     context['edit_task_form'] = etForm
     

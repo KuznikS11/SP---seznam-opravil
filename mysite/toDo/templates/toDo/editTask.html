@@ -19,10 +19,10 @@
 	
 	<section class="main">
 		<h2>  Edit task </h2>
-		<form method="POST" action="allTasks.html" class="formLeft">
+		<form method="POST" class="formLeft">
 			{% csrf_token %}
 			{{ edit_task_form }}
-			<input class ="button" type="submit" name="editTask" >Edit task</input
+			<button class ="button" type="submit" name="editTask" >Edit task</button>
 			<button type="submit" name="cancel" >Cancel</button>
 		</form>
 	</section>

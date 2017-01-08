@@ -18,17 +18,10 @@
 	</header>
 	<div class="main">
 		<section class="sortBy">
-			<p>Which tasks:</p>
-			<select>
-				<option>Unfinished</option>
-				<option>Finished</option>
-			</select>
-			<p>Sort by:</p>
-			<select>
-				<option>Date</option>
-				<option>Category</option>
-				<option>Priority</option>
-			</select>
+			<form method="GET">
+				{{choose_tasks_form.as_p}}
+				<button>OK</button>
+			</form>
 		</section>
 		<section class="allTasks">
 
