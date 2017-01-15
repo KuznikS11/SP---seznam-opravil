@@ -1,36 +1,18 @@
+{% extends "toDo/base.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html>
-   <head>
-      <meta charset = "utf-8">
-	  <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <link rel="stylesheet" href="{% static 'toDo/newTask.css' %}">
-      <title>ToDo-editTask</title>
-   </head>
+{% block csv %}
+	<link rel="stylesheet" href="{% static 'newTask.css' %}">
+{% endblock %}
 
-   <body>
-	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
-		<span class="header-name">To Do List</span>
-		<div class="header-links"><a href="profil.html"> Sara </a></div>
-		<div class="header-links"><a href="index.html"> Log out </a></div>
-	</header>
-	
+{% block main %}	
 	<section class="main">
 		<h2>  Edit task </h2>
 		<form method="POST" class="formLeft">
 			{% csrf_token %}
 			{{ edit_task_form }}
-			<button class ="button" type="submit" name="editTask" >Edit task</button>
-			<button type="submit" name="cancel" >Cancel</button>
+			<input class ="button" type="submit" name="editTask" value="Edit task"></input>
 		</form>
+		<a class="button" href="{% url 'allTasks' user.id %}" >Cancel</a>
 	</section>
-	
-	<footer>
-		<a href="legal.html">Legal disclaimer</a>
-		<a href="mailto:sk9061@student.uni-lj.si">Contact author</a>
-        <p>&copy; ToDoList</p>
-    </footer>
-	</body>
-</html>
+{% endblock %}

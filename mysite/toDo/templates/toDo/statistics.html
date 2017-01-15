@@ -1,0 +1,21 @@
+{% extends "toDo/base.html" %}
+{% load static %}
+
+{% block csv %}
+	  <link rel="stylesheet" href="{% static 'toDo/newTask.css' %}">
+{% endblock %}
+
+{%block main %}
+	<section class="main">
+		<h2> Today </h2>
+		<p class="stat"> You have finished <span class="number"> {{n_finished_t}}</span> tasks today.
+		<br> You have <span class="number">{{n_unfinished}}</span> tasks left to finish.
+		<br> You have added <span class="number">{{n_new_t}}</span> tasks today.</p>
+			
+		<h2> This week </h2>
+		<p class="stat"> You have finished <span class="number"> {{n_finished_w}}</span> tasks this week.
+		<br> You have <span class="number">{{n_unfinished}}</span> tasks left to finish.
+		<br> You have added <span class="number">{{n_new_w}}</span> tasks this week.</p>
+			
+	</section>
+{% endblock %}

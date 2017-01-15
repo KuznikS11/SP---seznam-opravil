@@ -1,26 +1,16 @@
+{% extends "toDo/base.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html>
-   <head>
-      <meta charset = "utf-8" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <link rel="stylesheet" href="{% static 'toDo/allTasks.css' %}">
-      <title>ToDo-allTaks</title>
-   </head>
+{% block csv %}
+	<link rel="stylesheet" href="{% static 'allTasks.css' %}">
+{% endblock %}
 
-   <body>
-	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
-		<span class="header-name">To Do List</span>
-		<div class="header-links"><a href="profil.html"> Sara </a></div>
-		<div class="header-links"><a href="index.html"> Log Out </a></div>
-	</header>
+{% block main %}
 	<div class="main">
 		<section class="sortBy">
 			<form method="GET">
 				{{choose_tasks_form.as_p}}
-				<button>OK</button>
+				<input class="button_ok" type="submit" value="OK"></input>
 			</form>
 		</section>
 		<section class="allTasks">
@@ -31,10 +21,4 @@
 			
 		</section>	
 	</div>
-	<footer>
-		<a href="legal.html">Pravna obvestila</a>
-		<a href="authors.html">O avtorjih</a>
-        <p>&copy; ToDoList</p>
-    </footer>
-	</body>
-</html>
+{% endblock %}

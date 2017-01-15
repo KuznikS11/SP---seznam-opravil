@@ -1,6 +1,6 @@
 
 <div class="task">
-	<p class="name"> {{task.name}} <a name="edit" class="edit" href="{% url 'editTask' task.id %}">Edit</a></p>
+	<p class="name"> {{task.name}} <a name="edit" class="edit" href="{% url 'done' task.id %}">Done</a><a name="edit" class="edit" href="{% url 'editTask' task.id %}">Edit</a></p>
 	<div>
 		<p><span>Description:</span> {{task.description}}
 		<br><span>Due date:</span> {{task.due_date}}

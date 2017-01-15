@@ -45,46 +45,48 @@ header{
 	font-size: 60px;
 	color:white;
 }
-section{
+.main {
 	background:#e6e6e6;
-	padding: 10px 50px;
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.signIn {
+	display:block;
+	background: #99c2ff;
+	border-radius: 4px;
+	padding: 8px;
+	width : 300px;
+	margin:0 auto;
 }
 h2{
 	font-family: Verdana;
+	text-align: center;
 	font-size:25px;
 	color:#0052cc;
+}
+form{
+	display:flex;
+	flex-flow:column;
+	font-size:20px;
 }
 form input{
 	font-size:17px;
 	padding: 3px;
 }
-form{
-	width:220px;
-	display:flex;
-	flex-flow:column;
-	font-size: 16px;
-	color:#1f1f7a;
-	font-family: Verdana;
-	font-weight: bold;
-	padding-bottom: 10px;
-}
-.button{
+button{
 	border-radius: 4px;
 	background-color: #0066ff;
     border: none;
     color: white;
-    padding: 5px;
+    padding: 8px;
     text-align: center;
-    font-size: 18px;
-	font-family: Verdana;
-	margin-top: 10px;
-	text-decoration: none;
-	}
-.button:hover{
+    font-size: 20px;
+    margin: 20px 70px;
+}
+button:hover{
 	color:#c6c6ec;
 }
-
-.message{
+.login_m {
 	color: red;
 	font-size : 20px;
 }

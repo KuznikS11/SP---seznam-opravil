@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html
+
+<html>
+   <head>
+      <meta charset = "utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  {%block csv %}
+	  {% endblock %}
+	  <script type="text/javascript" src="js/validation.js"></script>
+      <title>To Do</title>
+   </head>
+
+   <body>
+	<header>
+		<a href="{% url 'index' %}" class="logo"><img src="{% static 'toDo/logo.png' %}" alt="logo" width="100"/></a>
+		<span class="header-name">To Do List</span>
+		{% if user.is_authenticated %}
+            <div class="header-links"><a href="{% url 'home' %}" > {{ user.username }} </a></div>
+			<div class="header-links"><a href="{% url 'logout_user' %}" > Log Out </a></div>
+        {% else %}
+			<div class="header-links"><a href="{% url 'login_my' %}"> Login </a></div>
+			<div class="header-links"><a href="{% url 'register' %}"> Sign up </a></div>
+		{% endif %}
+	</header>
+	{% block main %}
+	{% endblock %}
+	
+	<footer>
+		<a href="{% url 'legal' %}">Legal disclaimer</a>
+		<a href="mailto:sk9061@student.uni-lj.si">Contact author</a>
+        <p>&copy; ToDoList</p>
+    </footer>
+	</body>
+</html>

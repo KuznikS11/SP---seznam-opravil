@@ -1,34 +1,22 @@
+{% extends "toDo/base.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html>
-   <head>
-      <meta charset = "utf-8" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  <link rel="stylesheet" href="{% static 'toDo/profil.css' %}">
-      <title>ToDo-profil</title>
-   </head>
+{% block csv %}
+	  <link rel="stylesheet" href="{% static 'profil.css' %}">
+{% endblock %}
+      
 
-   <body>
-	<header>
-		<a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"/></a>
-		<span class="header-name">To Do List</span>
-		{% if user.is_authenticated %}
-			<div class="header-links"><a href="profil.html" > {{ user.username }} </a></div>
-			<div class="header-links"><a href="{% url 'logout' %}" > Log Out </a></div>
-		{% endif %}
-	</header>
+{%block main %}
 	<div class="main">
 		<section class="profil">
-			<h2> Hi, Sara! </h2>
+			<h2> Hi, {{ user.username }}! </h2>
 			<p class="stat"> You have <span class="number"> {{n_unfinished}} unfinished</span> tasks
 			<br> and <span class="number">{{n_finished}} finished</span> tasks </p>
 			<nav>
 				<ul>
-					<li><a href="statistics.html">Statistics</a></li>
-					<li><a href="settings.html">Settings</a></li>
+					<li><a href="{% url 'settings' user_id %}">Settings</a></li>
 					<li><a href="{% url 'allTasks' user_id %}">All tasks</a></li>
-					<li><a href="newTask.html">Add task</a></li>
+					<li><a href="{% url 'newTask' user_id %}">Add task</a></li>
 				</ul>
 			</nav>	
 		</section>
@@ -46,22 +34,16 @@
 		<section class="tasks">
 			<h3> Your tasks: </h3>
 			{% for task in all_tasks %}
-				<input type="checkbox"/><p class ="taskCB"> {{task.name }}</p> 
+				<p class ="taskCB"> {{task.name }} <a class="done" href="{% url 'done' task.id%}">Done</a></p>
 			{% endfor %}
 			<div class="buttons">
-				<form action="allTasks.html">
+				<form action="{% url 'allTasks' user_id %}">
 					<button type="submit" name="tasks" >See all tasks</button>
 				</form>
-				<form action="newTask.html">
+				<form action="{% url 'newTask' user_id %}">
 					<button type="submit" name="newTask">Add new task</button>
 				</form>
 			</div>
 		</section>
 	</div>
-	<footer>
-		<a href="legal.html">Pravna obvestila</a>
-		<a href="authors.html">O avtorjih</a>
-        <p>&copy; ToDoList</p>
-    </footer>
-	</body>
-</html>
+{% endblock %}
